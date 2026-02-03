@@ -79,61 +79,6 @@
         .experience-border {
             border-left: 2px dashed rgba(138, 43, 226, 0.3);
         }
-
-        /* --- Pipeline Animation Styles --- */
-        .pipeline-node {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(138, 43, 226, 0.1);
-            border: 1px solid rgba(138, 43, 226, 0.3);
-            position: relative;
-            z-index: 2;
-        }
-
-        .pipeline-connector {
-            flex-grow: 1;
-            height: 2px;
-            background: rgba(138, 43, 226, 0.2);
-            position: relative;
-            margin: 0 -10px;
-            z-index: 1;
-        }
-
-        .pipeline-flow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 30px;
-            background: linear-gradient(90deg, transparent, #a855f7, transparent);
-            animation: flow 2s linear infinite;
-        }
-
-        @keyframes flow {
-            0% { left: -100%; }
-            100% { left: 200%; }
-        }
-
-        .status-pulse {
-            width: 10px;
-            height: 10px;
-            background: #22c55e;
-            border-radius: 50%;
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            box-shadow: 0 0 10px #22c55e;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(2.5); opacity: 0; }
-        }
     </style>
 </head>
 <body>
@@ -163,7 +108,9 @@
 
     <section id="skills" class="py-24 px-6 max-w-7xl mx-auto">
         <h2 class="text-4xl font-bold mb-16 text-center italic">Technical Skills</h2>
+        
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
             <div class="glass-card p-6 rounded-2xl">
                 <span class="category-label">Cloud & Infrastructure</span>
                 <div class="flex flex-wrap gap-2">
@@ -175,6 +122,7 @@
                     <div class="skill-badge"><i class="devicon-ansible-plain colored"></i> Ansible</div>
                 </div>
             </div>
+
             <div class="glass-card p-6 rounded-2xl">
                 <span class="category-label">CI/CD & Source Control</span>
                 <div class="flex flex-wrap gap-2">
@@ -185,6 +133,7 @@
                     <div class="skill-badge"><i class="devicon-maven-plain colored"></i> Maven</div>
                 </div>
             </div>
+
             <div class="glass-card p-6 rounded-2xl">
                 <span class="category-label">Containers & Orchestration</span>
                 <div class="flex flex-wrap gap-2">
@@ -195,6 +144,7 @@
                     <div class="skill-badge"><i class="devicon-bash-plain"></i> Bash</div>
                 </div>
             </div>
+
             <div class="glass-card p-6 rounded-2xl">
                 <span class="category-label">Observability & Messaging</span>
                 <div class="flex flex-wrap gap-2">
@@ -207,6 +157,7 @@
                     <div class="skill-badge"><i class="fas fa-database text-blue-300"></i> ELK Stack</div>
                 </div>
             </div>
+
             <div class="glass-card p-6 rounded-2xl">
                 <span class="category-label">Security & Identity</span>
                 <div class="flex flex-wrap gap-2">
@@ -220,6 +171,7 @@
                     <div class="skill-badge"><i class="fas fa-search-plus text-yellow-400"></i> OWASP</div>
                 </div>
             </div>
+
             <div class="glass-card p-6 rounded-2xl">
                 <span class="category-label">Server & Management</span>
                 <div class="flex flex-wrap gap-2">
@@ -231,41 +183,7 @@
                     <div class="skill-badge"><i class="fas fa-paper-plane text-orange-500"></i> Postman</div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="py-12 px-6 max-w-5xl mx-auto">
-        <div class="glass-card p-10 rounded-[40px] border-dashed border-purple-500/20 text-center">
-            <span class="category-label mb-8">Live CI/CD Deployment Flow</span>
-            <div class="flex items-center justify-between gap-2 max-w-3xl mx-auto overflow-x-auto pb-4">
-                
-                <div class="flex flex-col items-center gap-3">
-                    <div class="pipeline-node"><i class="fas fa-code text-2xl text-purple-400"></i><div class="status-pulse"></div></div>
-                    <span class="text-[10px] font-mono text-slate-500 uppercase">Source</span>
-                </div>
-                
-                <div class="pipeline-connector"><div class="pipeline-flow"></div></div>
-
-                <div class="flex flex-col items-center gap-3">
-                    <div class="pipeline-node"><i class="fas fa-tools text-2xl text-purple-400"></i><div class="status-pulse"></div></div>
-                    <span class="text-[10px] font-mono text-slate-500 uppercase">Build</span>
-                </div>
-
-                <div class="pipeline-connector"><div class="pipeline-flow" style="animation-delay: 0.5s;"></div></div>
-
-                <div class="flex flex-col items-center gap-3">
-                    <div class="pipeline-node"><i class="fas fa-shield-virus text-2xl text-purple-400"></i><div class="status-pulse"></div></div>
-                    <span class="text-[10px] font-mono text-slate-500 uppercase">Security</span>
-                </div>
-
-                <div class="pipeline-connector"><div class="pipeline-flow" style="animation-delay: 1s;"></div></div>
-
-                <div class="flex flex-col items-center gap-3">
-                    <div class="pipeline-node"><i class="fas fa-rocket text-2xl text-purple-400"></i><div class="status-pulse"></div></div>
-                    <span class="text-[10px] font-mono text-slate-500 uppercase">Deploy</span>
-                </div>
-
-            </div>
         </div>
     </section>
 
